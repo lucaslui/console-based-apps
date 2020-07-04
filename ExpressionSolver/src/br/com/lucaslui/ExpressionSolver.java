@@ -13,7 +13,7 @@ import java.util.Stack;
  */
 public class ExpressionSolver {
 
-    public static double Evaluate(String expression) {
+    public static double evaluate(String expression) {
 
         Stack<Double> numberStack = new Stack<>();
         Stack<Character> operationStack = new Stack<>();
@@ -61,7 +61,7 @@ public class ExpressionSolver {
 
     // Função retorna verdadeiro somente se o operador atual tem menor procedencia 
     // que o anterior armazenado no stack
-    public static Boolean TestPrecedence(char curr_op, char old_op) {
+    private static Boolean TestPrecedence(char curr_op, char old_op) {
         if (old_op == '(' || old_op == ')') {
             return false;
         }
@@ -76,7 +76,7 @@ public class ExpressionSolver {
     }
 
     // Função que evaluate a expressão a nível mínimo desta
-    public static double AtomicEvaluate(double b, double a, char operation) {
+    private static double AtomicEvaluate(double b, double a, char operation) {
         switch (operation) {
             case '^':
                 return Math.pow(a, b);

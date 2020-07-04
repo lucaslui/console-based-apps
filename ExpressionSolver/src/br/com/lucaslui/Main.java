@@ -26,13 +26,17 @@ public class Main {
             System.out.println("Digita a expressão desejada:");
             String expression = userInput.nextLine();
 
-            double result = ExpressionSolver.Evaluate(expression);
-            System.out.println(result);
+            double result = ExpressionSolver.evaluate(expression);
+            System.out.println("O resultado é: " + result);
 
-            System.out.println("\nPressione qualquer tecla para continuar ou 5 para sair.\n");
+            System.out.println("\nDigital 1 para continuar no programa ou 2 para sair.\n");
             int userChoice = Integer.parseInt(userInput.nextLine());
             
-        } while (isAppToClose == true);
+            if(userChoice == 2){
+                isAppToClose = true;
+            }
+            
+        } while (isAppToClose == false);
     }
 
 }
