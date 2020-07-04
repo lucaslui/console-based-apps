@@ -29,7 +29,7 @@ public class Main {
             double result = ExpressionSolver.evaluate(expression);
             System.out.println("O resultado é: " + result);
 
-            System.out.println("\nDigital 1 para continuar no programa ou 2 para sair.\n");
+            System.out.println("\nPara continuar no programa digite 1 e tecle ENTER ou digite 2 e tecle ENTER para sair.");
             int userChoice = Integer.parseInt(userInput.nextLine());
             
             if(userChoice == 2){
